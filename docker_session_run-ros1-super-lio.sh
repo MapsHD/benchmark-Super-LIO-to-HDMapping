@@ -9,7 +9,7 @@ BAG_OUTPUT_CONTAINER='/ros_ws/recordings'
 RECORDED_BAG_NAME="recorded-super-lio.bag"
 HDMAPPING_OUT_NAME="output_hdmapping"
 
-RESULT_SUPER_LIO_HOST_PATH=~/hdmapping-benchmark/benchmark-SUPER-LIO-to-HDMapping/src/Super-LIO-to-HDMappnig/src/Super-LIO/src/super_lio/map
+RESULT_SUPER_LIO_HOST_PATH=~/hdmapping-benchmark/benchmark-Super-LIO-to-HDMapping/src/Super-LIO/src/super_lio/map
 RESULT_SUPER_LIO_CONTAINER_PATH=/ros_ws/src/Super-LIO/src/super_lio/map
 
 usage() {
