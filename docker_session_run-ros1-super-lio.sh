@@ -58,8 +58,6 @@ BAG_OUTPUT_HOST=$(realpath "$BAG_OUTPUT_HOST")
 echo "Input bag : $DATASET_HOST_PATH"
 echo "Output dir: $BAG_OUTPUT_HOST"
 
-mkdir -p "$RESULT_IG_LIO_PATH"
-
 xhost +local:docker >/dev/null
 
 docker run -it --rm \
