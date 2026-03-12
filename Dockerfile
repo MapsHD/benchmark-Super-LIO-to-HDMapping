@@ -55,6 +55,8 @@ WORKDIR /ros_ws
 
 COPY ./src ./src
 
+RUN sed -i 's|imu_topic: "/handsfree/imu"|imu_topic: "/imu/data"|g' src/Super-LIO/src/super_lio/config/M2DGR.yaml
+
 WORKDIR /ros_ws
 
 RUN source /opt/ros/noetic/setup.bash && \

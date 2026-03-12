@@ -1,10 +1,12 @@
 # SUPER-LIO to HDMapping simlified instruction
 
 ## Step 1 (prepare data)
-Download the dataset `reg-1.bag` by clicking [link](https://cloud.cylab.be/public.php/dav/files/7PgyjbM2CBcakN5/reg-1.bag) (it is part of [Bunker DVI Dataset](https://charleshamesse.github.io/bunker-dvi-dataset)).
+Download the dataset `kitti_seq00_ros1.bag` by clicking [link](https://huggingface.co/datasets/kubchud/kitti_to_ros/resolve/main/kitti_seq00_ros1.bag) (it is part of [kitti_seq](https://github.com/Jakubach/kitti_to_ros)).
 
-File 'reg-1.bag' is an input for further calculations.
-It should be located in '~/hdmapping-benchmark/data'.
+### Extract the dataset
+
+File `kitti_seq00_ros1.bag` is an input for further calculations.
+It should be located in `~/hdmapping-benchmark/data`.  
 
 
 ## Step 2 (prepare docker)
@@ -13,16 +15,16 @@ mkdir -p ~/hdmapping-benchmark
 cd ~/hdmapping-benchmark
 git clone https://github.com/MapsHD/benchmark-Super-LIO-to-HDMapping.git --recursive
 cd benchmark-Super-LIO-to-HDMapping
-git checkout Bunker-DVI-Dataset-reg-1
+git checkout kitti
 docker build -t super-lio_noetic .
 ```
 
-## Step 3 (run docker, file 'reg-1.bag' should be in '~/hdmapping-benchmark/data')
+## Step 3 (run docker, file 'kitti_seq00_ros1.bag' should be in '~/hdmapping-benchmark/data')
 ```shell
 cd ~/hdmapping-benchmark/benchmark-Super-LIO-to-HDMapping
 chmod +x docker_session_run-ros1-super-lio.sh 
 cd ~/hdmapping-benchmark/data
-~/hdmapping-benchmark/benchmark-Super-LIO-to-HDMapping/docker_session_run-ros1-super-lio.sh reg-1.bag .
+~/hdmapping-benchmark/benchmark-Super-LIO-to-HDMapping/docker_session_run-ros1-super-lio.sh kitti_seq00_ros1.bag .
 ```
 
 ## Step 4 (Open and visualize data)
