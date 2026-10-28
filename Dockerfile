@@ -55,6 +55,11 @@ WORKDIR /ros_ws
 
 COPY ./src ./src
 
+# Canonical-bag sensor profile (config + launch), kept out of the upstream
+# Super-LIO submodule: its own M2DGR.yaml with only the sensor description changed.
+COPY ./overlay/config/ ./src/Super-LIO/src/super_lio/config/
+COPY ./overlay/launch/ ./src/Super-LIO/src/super_lio/launch/
+
 WORKDIR /ros_ws
 
 RUN source /opt/ros/noetic/setup.bash && \
